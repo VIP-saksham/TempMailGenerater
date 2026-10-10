@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Temp Mail — Unlimited</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>📮 Temp Mail</h1>
+    <p class="sub">Unlimited inboxes · your own domain · no third-party API</p>
+  </header>
+
+  <section class="card">
+    <div class="row">
+      <input id="localPart" placeholder="custom name (optional) e.g. mybox1">
+      <button id="newInbox" class="btn primary">＋ New Inbox</button>
+    </div>
+    <div id="addrBox" class="addr hidden">
+      <span id="addrText" class="addr-text"></span>
+      <button id="copyAddr" class="btn ghost">📋 Copy</button>
+      <button id="refresh" class="btn ghost">⟳ Refresh</button>
+      <button id="delInbox" class="btn danger">🗑 Delete</button>
+    </div>
+  </section>
+
+  <section id="messages" class="card hidden">
+    <h2>Inbox</h2>
+    <div id="msgList" class="msg-list">
+      <p class="empty">No messages yet. Send a mail to your address — it'll show up in a few seconds.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>self-hosted temp mail · powered by your own VPS</p>
+  </footer>
+</div>
+
+<div id="toast" class="toast hidden"></div>
+<script src="/static/app.js"></script>
+</body>
+</html>
